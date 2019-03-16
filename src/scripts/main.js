@@ -1,22 +1,24 @@
-console.log('asd');
-
-const dsa = new Promise((r) => {
-	r('asd');
-});
-
-export class Asd {
-	static async asd() {
-		const ddd = await dsa;
-
-		console.log(ddd);
-		Array.from([1, 2, 3], (el) => {
-			console.log(el);
-        });
-        
-        fetch();
-
-		return ddd;
-	}
+function createNode(element) {
+	return document.createElement(element);
 }
 
-Asd.asd();
+function append(parent, el) {
+	return parent.appendChild(el);
+}
+
+const gallery = document.querySelector("#images");
+const apiUrl = "https://pixabay.com/api/?key=10345617-64d66bf9e1b081a57af727dca&q=beauty&girl&image_type=photo&pretty=true";
+fetch(apiUrl)
+	.then(res => res.json())
+	.then(function (data) {
+		let images = data.hits;
+		return images.map(function (image) {
+			let img = createNode('img');
+			img.src = image.largeImageURL;
+			append(gallery, img);
+		})
+	})
+
+	.catch(function (error) {
+		console.log(error);
+	});
