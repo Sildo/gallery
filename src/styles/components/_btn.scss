@@ -1,0 +1,22 @@
+.c-btn {
+    display: inline-block;
+
+    padding: 5px 35px;
+    border: 2px solid color('primary');
+    border-radius: 25px;
+
+    background: transparent;
+    color: color('primary');
+
+    font-size: 1rem;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    &:active,
+    &:focus,
+    &:hover {
+        background: color('primary');
+        color: color('background');
+    }
+}

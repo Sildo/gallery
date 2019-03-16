@@ -1,0 +1,31 @@
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'] {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 8px 10px;
+    
+    transition: box-shadow .1s;
+
+    border: 1px solid color(primary);
+    
+    
+    @include font('default');
+    font-weight: 300;
+    line-height: 1.5;
+
+    &.is-error {
+        border-color: color('error');
+    }
+}
+
+
+
+.input-error {
+    margin: .2em 0;
+    color: color(error);
+    @include font('small');
+}

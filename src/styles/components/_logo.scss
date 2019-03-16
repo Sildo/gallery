@@ -1,0 +1,15 @@
+.c-logo {
+    margin: 0;
+
+    a {
+        color: color('background');
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    img {
+        max-height: 64px;
+        padding-right: 4px;
+        vertical-align: middle;
+    }
+}

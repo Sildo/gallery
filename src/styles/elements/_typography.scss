@@ -1,0 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @if(font-family('heading') != font-family('default')) {
+        font-family: font-family('heading');
+    }
+    
+    margin: 1em 0;
+}
+
+p {
+    margin: 1em 0;
+}
+
